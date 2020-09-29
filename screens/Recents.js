@@ -2,10 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-const App = () => {
+const Recents = () => {
   return (
     <View style={styles.container}>
-      <Text>This is app </Text>
+      <Text>This is Home </Text>
     </View>
   );
 };
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Recents;
