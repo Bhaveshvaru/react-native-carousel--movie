@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const Recents = () => {
   return (
     <View style={styles.container}>
-      <Text>This is Home </Text>
+      <Text>This is Recents </Text>
     </View>
   );
 };

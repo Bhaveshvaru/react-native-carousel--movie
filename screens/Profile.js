@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 const Profile = () => {
   return (
     <View style={styles.container}>
-      <Text>This is Home </Text>
+      <Text>This is Profile </Text>
     </View>
   );
 };
