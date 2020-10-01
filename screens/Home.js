@@ -78,19 +78,20 @@ const Home = () => {
   const { width, height } = Dimensions.get('window');
   const renderItem = ({ item, index }) => {
     return (
-      <View>
-        <TouchableOpacity>
-          {/* <Image soure={{ uri: item.image }} style={styles.carouselImage} /> */}
-          <Image source={{uri:item.image}} style={styles.carouselImage} />
-          <Text style={styles.carouselText}>{item.title}</Text>
-          <MaterialIcons
-            name="library-add"
-            size={30}
-            color="white"
-            style={styles.carouselIcon}
-          />
-        </TouchableOpacity>
-      </View>
+      <>
+        <View>
+          <TouchableOpacity>
+            <Image source={{ uri: item.image }} style={styles.carouselImage} />
+            <Text style={styles.carouselText}>{item.title}</Text>
+            <MaterialIcons
+              name="library-add"
+              size={30}
+              color="white"
+              style={styles.carouselIcon}
+            />
+          </TouchableOpacity>
+        </View>
+      </>
     );
   };
   return (
@@ -134,8 +135,8 @@ const Home = () => {
                 itemWidth={200}
                 containerWidth={width - 20}
                 seperatorWidth={0}
-                ref={carouselRef}
                 inActiveOpacity={0.4}
+                ref={carouselRef}
               />
             </View>
           </ImageBackground>
@@ -169,7 +170,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     elevation: 10,
     borderRadius: 4,
-    marginVertical:30,
+    marginVertical: 30,
     width: '95%',
     flexDirection: 'row',
     alignSelf: 'center',
@@ -194,7 +195,7 @@ const styles = StyleSheet.create({
     height: 320,
     borderRadius: 10,
     backgroundColor: 'rgb(0,0,0.9)',
-    alignSelf:"center"
+    alignSelf: 'center',
   },
   carouselText: {
     padding: 14,
@@ -209,11 +210,31 @@ const styles = StyleSheet.create({
     top: 15,
     right: 15,
   },
-  searchBoxIcon:{
-   position:'absolute',
-   top:14,
-   right:20
-  }
+  searchBoxIcon: {
+    position: 'absolute',
+    top: 14,
+    right: 20,
+  },
+  movieInfoContainer: {
+    flexDirection: 'row',
+    marginTop: 16,
+    justifyContent: 'space-between',
+    width: Dimensions.get('window').width - 14,
+  },
+  movieName: {
+    paddingLeft: 14,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginBottom: 6,
+  },
+  movieStat: {
+    paddingLeft: 14,
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 14,
+    opacity: 0.8,
+  },
 });
 
 export default Home;
